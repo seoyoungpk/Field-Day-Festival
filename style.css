@@ -1,0 +1,165 @@
+body {
+    background-color: rgb(244, 245, 255);
+    color: #2054FF;
+    font-family: Arial, sans-serif;
+    cursor: url('/asset/cursor-100.svg'), auto;
+}
+
+.title {
+    position: relative;
+    top: 80px;
+    left: 5vw;
+    font-size: 1.5rem;
+    width: 100%;
+    height: 200px;
+}
+
+.contents {
+    width: 100%;
+    position: relative;
+}
+
+.line {
+    position: relative;
+    left: 5vw;
+    font-size: 2.8rem;
+    line-height: 1.7em;
+    word-wrap: break-word;
+}
+
+.sand, .bar, .mycar, .page, .queen, .lying {
+    position: relative;
+    text-decoration: underline;
+    transition: opacity 0.3s ease;
+}
+
+
+.sand:hover, .bar:hover, .mycar:hover, .queen:hover {
+    color: rgb(244, 245, 255);
+    cursor: url('/asset/cursor-50.svg'), auto;
+    transition: color 0.3s ease;
+}
+
+.page:hover, .lying:hover {
+    text-decoration: none;
+    cursor: url('/asset/cursor-50.svg'), auto;
+}
+
+
+.sand-image, .bar-image, .mycar-image, .page-image, .queen-image, .lying-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 130px;
+    opacity: 0;  /* Image starts hidden */
+    transition: opacity 0.3s ease;
+}
+
+.sand:hover .sand-image,
+.bar:hover .bar-image,
+.mycar:hover .mycar-image,
+.page:hover .page-image,
+.queen:hover .queen-image,
+.lying:hover .lying-image { opacity: 1;  
+}
+
+.box {
+    position: relative;
+    width: 100%; 
+    display: flex;
+    justify-content: flex-end;
+}
+
+.shape {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+} 
+
+
+.bottom {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 800px;
+    background-color: #2054FF;
+}
+
+.bottom-overlay {
+    position: relative;
+    display: flex;
+    align-items: center;
+	color: white;
+    font-size: 2.8rem;
+	font-style: normal;
+	font-weight: 700;
+	opacity: 0;
+	transform: translateY(300px); 
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+
+
+
+@media (max-width: 1200px) {
+    .title {
+        font-size: 1.2rem; 
+        left: 10vw;
+    }
+    .line {
+        font-size: 2rem;
+        left: 10vw;
+    }
+    .sand-image, .bar-image, .mycar-image, .page-image, .queen-image, .lying-image {
+        width: auto;
+        height: 100px;
+    }
+}
+
+@media (max-width: 976px) {
+    .title {
+        font-size: 1rem;
+        left: 5vw;
+    }
+    .line {
+        font-size: 1.5rem;
+        left: 5vw;
+    }
+    .sand-image, .bar-image, .mycar-image, .page-image, .queen-image, .lying-image {
+        width: auto;
+        height: 70px;
+    }
+
+    .bottom {
+        height: 600px; 
+    }
+    .bottom-overlay {
+        font-size: 4vw; 
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 0.6rem;
+        left: 5vw;
+    }
+    .line {
+        font-size: 1rem;
+        left: 5vw;
+    }
+    .sand-image, .bar-image, .mycar-image, .page-image, .queen-image, .lying-image {
+        width: auto;
+        height: 110px;
+    }
+
+    .bottom {
+        height: 400px; 
+    }
+    .bottom-overlay {
+        font-size: 5vw; 
+    }
+}
+
+

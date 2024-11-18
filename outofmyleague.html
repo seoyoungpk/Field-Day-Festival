@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Out Of My League</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+    <header class="title">
+        Lany a beautiful blur : Out Of My League
+    </header>
+
+    <div class="contents">
+        <div class="line">
+            <div>She loves the <span class="sand">sand<img class="sand-image" src="./asset/sand.png" alt="sand image"></span>,
+                he loves the <span class="bar">bar<img class="bar-image" src="./asset/bar.png" alt="bar image"></span></div>
+            <div>Got half the beach left in <span class="mycar">my car<img class="mycar-image" src="./asset/mycar.png" alt="mycar image"></span></div>
+            <div> Sweetheart from a sweet home Alabama trailer park </div>
+            <div>Straight off the <span class="page">page<img class="page-image" src="./asset/page.png" alt="page image"></span> of a magazine </div> <br>
+            <div>A quintessential beauty <span class="queen">queen<img class="queen-image" src="./asset/queen.png" alt="queen image"></span></div>
+            <div>My Princess Di in vintage tees and torn-up jeans </div>
+            <div>Everybody thinks <span class="lying">I'm lying<img class="lying-image" src="./asset/lying.png" alt="lying image"></span></div>
+            <div>When I say she's mine 'cause</div>
+        </div>
+    </div>
+
+    <div class="box">
+        <video class="shape" autoplay loop muted playsinline>
+            <source src="./asset/shape.webm" type="video/webm">
+        </video>
+    </div>
+    
+
+    <div class="bottom">
+        <div class="bottom-overlay"> She is my out of my league </div>
+    </div>
+
+    <script>
+        $(window).scroll(function() {
+            let scrollTop = $(window).scrollTop(); // 현재 스크롤 위치
+            let windowHeight = $(window).height(); // 창 높이
+            let docHeight = $(document).height(); // 문서 전체 높이
+    
+            // 스크롤 비율 계산
+            let scrollRatio = scrollTop / (docHeight - windowHeight);
+    
+            // opacity와 translateY를 스크롤 비율에 따라 변경
+            $('.bottom-overlay').css({
+                opacity: scrollRatio, // 스크롤이 많아질수록 opacity 증가
+                transform: `translateY(${20 - scrollRatio * 20}px)` // 스크롤이 많아질수록 위로 이동
+            });
+        });
+    </script>
+</body>
+
+</html>
